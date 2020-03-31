@@ -15,6 +15,34 @@
             display: block;
             text-align: center;
         }
+        /* navigation bar */
+        
+        ul {
+            display: block;
+            list-style-type: none;
+            margin: 0%;
+            padding: 0%;
+            background-color: darkslategray;
+            width: 100vw;
+        }
+        
+        li {
+            display: inline-block;
+        }
+        
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            color: white;
+            background-color: #111111;
+        }
+        /* profile cards */
         
         .profile_card {
             display: flexbox;
@@ -47,6 +75,20 @@
 </head>
 
 <body>
+    <ul>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">News Feeds</a>
+        </li>
+        <li>
+            <a href="#">Users</a>
+        </li>
+        <li>
+            <a href="#">Admin</a>
+        </li>
+    </ul>
     <div class="container">
         <div class="row">
             <!-- user profile 01 -->
