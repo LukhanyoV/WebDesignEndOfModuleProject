@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dropdown and buttons</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <style>
+        body {
+            display: block;
+            text-align: center;
+        }
+        
+        .profile_card {
+            border: 2px solid black;
+            margin: 20px auto;
+            padding: 10px;
+        }
+        
+        .profile_pic {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .row {
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- user profile 01 -->
+            <div class="col-sm-4">
+                <div class="profile_card">
+                    <img src="./images/profile.png" alt="Profile Picture" class="profile_pic">
+                    <hr>
+                    <div>
+                        <div>Name: John Doe</div>
+                        <div>Email: johndoe@company.com</div>
+                        <div>Cell: 0712345678</div>
+                        <div>Landline: 0123456789</div>
+                    </div>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#profile01">details</button>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete01">delete</button>
+                </div>
+            </div>
+
+            <!-- user pofile 02 -->
+            <div class="col-sm-4">
+                <div class="profile_card">
+                    <img src="./images/profile.png" alt="Profile Picture" class="profile_pic">
+                    <hr>
+                    <div>
+                        <div>Name: John Smith</div>
+                        <div>Email: johnsmith@company.com</div>
+                        <div>Cell: 0712345678</div>
+                        <div>Landline: 0123456789</div>
+                    </div>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#profile02">details</button>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete02">delete</button>
+                </div>
+            </div>
+
+            <!-- user profile 03 -->
+            <div class="col-sm-4">
+                <div class="profile_card">
+                    <img src="./images/profile.png" alt="Profile Picture" class="profile_pic">
+                    <hr>
+                    <div>
+                        <div>Name: John Kane</div>
+                        <div>Email: johnkane@company.com</div>
+                        <div>Cell: 0712345678</div>
+                        <div>Landline: 0123456789</div>
+                    </div>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#profile03">details</button>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete03">delete</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- make some modal below -->
+        <!-- modal more info for user 01 -->
+        <div class="modal fade" id="profile01">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title text-info">Profile 01</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body text-primary">
+                        <p>Home Address: 314 Imam Haron Road</p>
+                        <p>Next of keen: Sally Doe</p>
+                        <p>Next of keen relationship: Wife</p>
+                        <p>Next of keen cell: 0780107159</p>
+                        <p>Next of keen email: sallydoe@email.com</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- modal delete for user 01 -->
+        <div class="modal fade" id="delete01">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title text-danger">Delete Card</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body text-primary">
+                        You are about to delete this card for <strong>John Doe</strong>, do you wish to continue?
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">YES</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">NO</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- modal more info for user 02 -->
+        <div class="modal fade" id="profile02">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title text-info">Profile 02</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body text-primary">
+                        <p>Home Address: 314 Imam Haron Road</p>
+                        <p>Next of keen: Sally Doe</p>
+                        <p>Next of keen relationship: Wife</p>
+                        <p>Next of keen cell: 0780107159</p>
+                        <p>Next of keen email: sallydoe@email.com</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- modal delete for user 02 -->
+        <div class="modal fade" id="delete02">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title text-danger">Delete Card</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body text-primary">
+                        You are about to delete this card for <strong>John Smith</strong>, do you wish to continue?
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">YES</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">NO</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- modal more info for user 03 -->
+        <div class="modal fade" id="profile03">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title text-info">Profile 03</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body text-primary">
+                        <p>Home Address: 314 Imam Haron Road</p>
+                        <p>Next of keen: Sally Doe</p>
+                        <p>Next of keen relationship: Wife</p>
+                        <p>Next of keen cell: 0780107159</p>
+                        <p>Next of keen email: sallydoe@email.com</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- modal delete for user 03 -->
+        <div class="modal fade" id="delete03">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title text-danger">Delete Card</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body text-primary">
+                        You are about to delete this card for <strong>John Kane</strong>, do you wish to continue?
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">YES</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">NO</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
