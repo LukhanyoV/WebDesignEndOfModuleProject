@@ -51,6 +51,7 @@
             padding: 10px;
             height: 350px;
             width: 220px;
+            text-align: left;
         }
         
         .profile_card .bottom {
@@ -69,6 +70,11 @@
         
         .add_user {
             display: block;
+            text-align: left;
+        }
+        /* modal body */
+        
+        .modal-body {
             text-align: left;
         }
     </style>
@@ -92,7 +98,7 @@
     <div class="container">
         <div class="row">
             <!-- user profile 01 -->
-            <div class="col-md-3">
+            <div class="col-md-3" id="card01">
                 <div class="profile_card">
                     <img src="./images/profile.png" alt="Profile Picture" class="profile_pic">
                     <hr>
@@ -110,7 +116,7 @@
             </div>
 
             <!-- user pofile 02 -->
-            <div class="col-md-3">
+            <div class="col-md-3" id="card02">
                 <div class="profile_card">
                     <img src="./images/profile.png" alt="Profile Picture" class="profile_pic">
                     <hr>
@@ -128,7 +134,7 @@
             </div>
 
             <!-- user profile 03 -->
-            <div class="col-md-3">
+            <div class="col-md-3" id="card03">
                 <div class="profile_card">
                     <img src="./images/profile.png" alt="Profile Picture" class="profile_pic">
                     <hr>
@@ -146,7 +152,7 @@
             </div>
 
             <!-- user profile 04 -->
-            <div class="col-md-3">
+            <div class="col-md-3" id="card04">
                 <div class="profile_card">
                     <img src="./images/profile.png" alt="Profile Picture" class="profile_pic">
                     <hr>
@@ -366,72 +372,89 @@
 
         <div class="add_user">
             <p>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                  Add new user
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#formUP">
+                    Add new user
                 </button>
             </p>
-            <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    <h2>Add new user</h2>
-                    <form class="was-validated">
-                        <div class="form-group">
-                            <label for="fname">Full Name:</label>
-                            <input type="text" class="form-control" id="fname" placeholder="Enter full name" name="fname" required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
+
+            <div class="modal fade" id="formUP">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- modal head -->
+                        <div class="modal-header">
+                            <h4 class="modal-title text-primary">Add user</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
+
+                        <!-- modal body  -->
+                        <div class="modal-body">
+                            <form class="was-validated">
+                                <div class="form-group">
+                                    <label for="fname">Full Name:</label>
+                                    <input type="text" class="form-control" id="fname" placeholder="Enter full name" name="fname" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="c_phone">Cellphone:</label>
+                                    <input type="number" class="form-control" id="c_phone" placeholder="Enter your cellphone number" name="c_phone" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="t_phone">Landline:</label>
+                                    <input type="number" class="form-control" id="t_phone" placeholder="Enter your landline number" name="t_phone" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address:</label>
+                                    <textarea name="address" id="address" class="form-control" cols="30" rows="3" required></textarea>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <hr>
+                                <h2>Next of keen:</h2>
+                                <div class="form-group">
+                                    <label for="k_fname">Full Name:</label>
+                                    <input type="text" class="form-control" id="k_fname" placeholder="Enter full name" name="k_fname" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="k_relate">Relationship:</label>
+                                    <input type="text" class="form-control" id="k_relate" placeholder="What's your relation with person?" name="k_relate" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="k_c_phone">Cellphone:</label>
+                                    <input type="number" class="form-control" id="k_c_phone" placeholder="Enter your cellphone number" name="k_c_phone" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="k_email">Email:</label>
+                                    <input type="email" class="form-control" id="k_email" placeholder="Enter your email" name="k_email" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <button type="submit" class="btn btn-dark" name="add_user">Submit</button>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <label for="c_phone">Cellphone:</label>
-                            <input type="number" class="form-control" id="c_phone" placeholder="Enter your cellphone number" name="c_phone" required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
+
+                        <!-- modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
-                        <div class="form-group">
-                            <label for="t_phone">Landline:</label>
-                            <input type="number" class="form-control" id="t_phone" placeholder="Enter your landline number" name="t_phone" required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="address">Address:</label>
-                            <textarea name="address" id="address" class="form-control" cols="30" rows="3" required></textarea>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
-                        <hr>
-                        <h2>Next of keen:</h2>
-                        <div class="form-group">
-                            <label for="k_fname">Full Name:</label>
-                            <input type="text" class="form-control" id="k_fname" placeholder="Enter full name" name="k_fname" required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="k_relate">Relationship:</label>
-                            <input type="text" class="form-control" id="k_relate" placeholder="What's your relation with person?" name="k_relate" required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="k_c_phone">Cellphone:</label>
-                            <input type="number" class="form-control" id="k_c_phone" placeholder="Enter your cellphone number" name="k_c_phone" required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="k_email">Email:</label>
-                            <input type="email" class="form-control" id="k_email" placeholder="Enter your email" name="k_email" required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
-                        <button type="submit" class="btn btn-dark" name="add_user">Submit</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
