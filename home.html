@@ -1,697 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dropdown and buttons</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <!-- Move these script imports to just before the closing <body> tag for performance reasons -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-    <!-- put these styles into an external .css sheet and import it instead. Its easier to maintain and read code that is split -->
-    <style>
-      body {
-        display: block;
-        text-align: center;
-      }
-      /* navigation bar */
-      /* when styling navigation bars, use classes instead of the tag selector */
-      ul {
-        display: block;
-        list-style-type: none;
-        margin: 0%;
-        padding: 0%;
-        background-color: darkslategray;
-        width: 100vw;
-      }
+    <title>Home | Lukhanyo Vakele</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <!-- made some custom css for the page -->
+    <link rel="stylesheet" href="./css/master.css">
+</head>
 
-      li {
-        display: inline-block;
-      }
-
-      li a {
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-
-      li a:hover {
-        color: white;
-        background-color: #111111;
-      }
-      /* profile cards */
-
-      .profile_card {
-        display: flexbox;
-        /* border: 2px solid black; */
-        margin: 20px auto;
-        padding: 10px;
-        height: 350px;
-        width: 220px;
-        text-align: left;
-      }
-
-      .profile_card .bottom {
-        align-self: flex-end;
-      }
-
-      .profile_pic {
-        width: 100px;
-        height: 100px;
-      }
-
-      .row {
-        margin: 20px auto;
-        justify-content: space-evenly;
-      }
-
-      .add_user {
-        display: block;
-        text-align: left;
-      }
-      /* modal body */
-
-      .modal-body {
-        text-align: left;
-      }
-    </style>
-  </head>
-
-  <body>
+<body>
     <ul>
-      <li>
-        <a href="#">Home</a>
-      </li>
-      <li>
-        <a href="#">News Feeds</a>
-      </li>
-      <li>
-        <a href="#">Users</a>
-      </li>
-      <li>
-        <a href="#">Admin</a>
-      </li>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">News Feeds</a>
+        </li>
+        <li>
+            <a href="#">Users</a>
+        </li>
+        <li>
+            <a href="#">Admin</a>
+        </li>
     </ul>
     <div class="container">
-      <div class="row">
-        <!-- user profile 01 -->
-        <div class="col-md-3" id="card01">
-          <div class="profile_card">
-            <img
-              src="./images/profile.png"
-              alt="Profile Picture"
-              class="profile_pic"
-            />
-            <hr />
-            <div>
-              <div>Name: John Doe</div>
-              <div>Email: johndoe@company.com</div>
-              <div>Cell: 0712345678</div>
-              <div>Landline: 0123456789</div>
-            </div>
-            <div class="bottom">
-              <button
-                type="button"
-                class="btn btn-info"
-                data-toggle="modal"
-                data-target="#profile01"
-              >
+        <div class="row">
+            <!-- user profile 01 -->
+            <div class="col-md-3" id="card01">
+                <div class="profile_card">
+                    <img src="./images/profile.png" alt="Profile Picture" class="profile_pic" />
+                    <hr />
+                    <div>
+                        <div>Name: John Doe</div>
+                        <div>Email: johndoe@company.com</div>
+                        <div>Cell: 0712345678</div>
+                        <div>Landline: 0123456789</div>
+                    </div>
+                    <div class="bottom">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#profile01">
                 details
               </button>
-              <button
-                type="button"
-                class="btn btn-danger"
-                data-toggle="modal"
-                data-target="#delete01"
-              >
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete01">
                 delete
               </button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <!-- user pofile 02 -->
-        <div class="col-md-3" id="card02">
-          <div class="profile_card">
-            <img
-              src="./images/profile.png"
-              alt="Profile Picture"
-              class="profile_pic"
-            />
-            <hr />
-            <div>
-              <div>Name: John Smith</div>
-              <div>Email: johnsmith@company.com</div>
-              <div>Cell: 0712345678</div>
-              <div>Landline: 0123456789</div>
-            </div>
-            <div class="bottom">
-              <button
-                type="button"
-                class="btn btn-info"
-                data-toggle="modal"
-                data-target="#profile02"
-              >
+            <!-- user pofile 02 -->
+            <div class="col-md-3" id="card02">
+                <div class="profile_card">
+                    <img src="./images/profile.png" alt="Profile Picture" class="profile_pic" />
+                    <hr />
+                    <div>
+                        <div>Name: John Smith</div>
+                        <div>Email: johnsmith@company.com</div>
+                        <div>Cell: 0712345678</div>
+                        <div>Landline: 0123456789</div>
+                    </div>
+                    <div class="bottom">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#profile02">
                 details
               </button>
-              <button
-                type="button"
-                class="btn btn-danger"
-                data-toggle="modal"
-                data-target="#delete02"
-              >
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete02">
                 delete
               </button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <!-- user profile 03 -->
-        <div class="col-md-3" id="card03">
-          <div class="profile_card">
-            <img
-              src="./images/profile.png"
-              alt="Profile Picture"
-              class="profile_pic"
-            />
-            <hr />
-            <div>
-              <div>Name: John Kane</div>
-              <div>Email: johnkane@company.com</div>
-              <div>Cell: 0712345678</div>
-              <div>Landline: 0123456789</div>
-            </div>
-            <div class="bottom">
-              <button
-                type="button"
-                class="btn btn-info"
-                data-toggle="modal"
-                data-target="#profile03"
-              >
+            <!-- user profile 03 -->
+            <div class="col-md-3" id="card03">
+                <div class="profile_card">
+                    <img src="./images/profile.png" alt="Profile Picture" class="profile_pic" />
+                    <hr />
+                    <div>
+                        <div>Name: John Kane</div>
+                        <div>Email: johnkane@company.com</div>
+                        <div>Cell: 0712345678</div>
+                        <div>Landline: 0123456789</div>
+                    </div>
+                    <div class="bottom">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#profile03">
                 details
               </button>
-              <button
-                type="button"
-                class="btn btn-danger"
-                data-toggle="modal"
-                data-target="#delete03"
-              >
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete03">
                 delete
               </button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <!-- user profile 04 -->
-        <div class="col-md-3" id="card04">
-          <div class="profile_card">
-            <img
-              src="./images/profile.png"
-              alt="Profile Picture"
-              class="profile_pic"
-            />
-            <hr />
-            <div>
-              <div>Name: John Wayne</div>
-              <div>Email: johnwayne@company.com</div>
-              <div>Cell: 0712345678</div>
-              <div>Landline: 0123456789</div>
-            </div>
-            <div class="bottom">
-              <button
-                type="button"
-                class="btn btn-info"
-                data-toggle="modal"
-                data-target="#profile04"
-              >
+            <!-- user profile 04 -->
+            <div class="col-md-3" id="card04">
+                <div class="profile_card">
+                    <img src="./images/profile.png" alt="Profile Picture" class="profile_pic" />
+                    <hr />
+                    <div>
+                        <div>Name: John Wayne</div>
+                        <div>Email: johnwayne@company.com</div>
+                        <div>Cell: 0712345678</div>
+                        <div>Landline: 0123456789</div>
+                    </div>
+                    <div class="bottom">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#profile04">
                 details
               </button>
-              <button
-                type="button"
-                class="btn btn-danger"
-                data-toggle="modal"
-                data-target="#delete04"
-              >
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete04">
                 delete
               </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
 
-      <!-- make some modal below -->
-      <!-- modal more info for user 01 -->
-      <div class="modal fade" id="profile01">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title text-info">Profile 01</h4>
-              <button type="button" class="close" data-dismiss="modal">
+        <!-- make some modal below -->
+        <!-- modal more info for user 01 -->
+        <div class="modal fade" id="profile01">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-info">Profile 01</h4>
+                        <button type="button" class="close" data-dismiss="modal">
                 &times;
               </button>
-            </div>
+                    </div>
 
-            <div class="modal-body text-primary">
-              <p>Home Address: 314 Imam Haron Road</p>
-              <p>Next of keen: Sally Doe</p>
-              <p>Next of keen relationship: Wife</p>
-              <p>Next of keen cell: 0780107159</p>
-              <p>Next of keen email: sallydoe@email.com</p>
-            </div>
+                    <div class="modal-body text-primary">
+                        <p>Home Address: 314 Imam Haron Road</p>
+                        <p>Next of keen: Sally Doe</p>
+                        <p>Next of keen relationship: Wife</p>
+                        <p>Next of keen cell: 0780107159</p>
+                        <p>Next of keen email: sallydoe@email.com</p>
+                    </div>
 
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">
                 Close
               </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
 
-      <!-- modal delete for user 01 -->
-      <div class="modal fade" id="delete01">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title text-danger">Delete Card</h4>
-              <button type="button" class="close" data-dismiss="modal">
+        <!-- modal delete for user 01 -->
+        <div class="modal fade" id="delete01">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-danger">Delete Card</h4>
+                        <button type="button" class="close" data-dismiss="modal">
                 &times;
               </button>
-            </div>
+                    </div>
 
-            <div class="modal-body text-primary">
-              You are about to delete this card for <strong>John Doe</strong>,
-              do you wish to continue?
-            </div>
+                    <div class="modal-body text-primary">
+                        You are about to delete this card for <strong>John Doe</strong>, do you wish to continue?
+                    </div>
 
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-success"
-                onclick="$('#card01').hide();"
-                data-dismiss="modal"
-              >
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" onclick="$('#card01').hide();" data-dismiss="modal">
                 YES
               </button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">
                 NO
               </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
 
-      <!-- modal more info for user 02 -->
-      <div class="modal fade" id="profile02">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title text-info">Profile 02</h4>
-              <button type="button" class="close" data-dismiss="modal">
+        <!-- modal more info for user 02 -->
+        <div class="modal fade" id="profile02">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-info">Profile 02</h4>
+                        <button type="button" class="close" data-dismiss="modal">
                 &times;
               </button>
-            </div>
+                    </div>
 
-            <div class="modal-body text-primary">
-              <p>Home Address: 314 Imam Haron Road</p>
-              <p>Next of keen: Sally Doe</p>
-              <p>Next of keen relationship: Wife</p>
-              <p>Next of keen cell: 0780107159</p>
-              <p>Next of keen email: sallydoe@email.com</p>
-            </div>
+                    <div class="modal-body text-primary">
+                        <p>Home Address: 314 Imam Haron Road</p>
+                        <p>Next of keen: Sally Doe</p>
+                        <p>Next of keen relationship: Wife</p>
+                        <p>Next of keen cell: 0780107159</p>
+                        <p>Next of keen email: sallydoe@email.com</p>
+                    </div>
 
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">
                 Close
               </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
 
-      <!-- modal delete for user 02 -->
-      <div class="modal fade" id="delete02">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title text-danger">Delete Card</h4>
-              <button type="button" class="close" data-dismiss="modal">
+        <!-- modal delete for user 02 -->
+        <div class="modal fade" id="delete02">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-danger">Delete Card</h4>
+                        <button type="button" class="close" data-dismiss="modal">
                 &times;
               </button>
-            </div>
+                    </div>
 
-            <div class="modal-body text-primary">
-              You are about to delete this card for <strong>John Smith</strong>,
-              do you wish to continue?
-            </div>
+                    <div class="modal-body text-primary">
+                        You are about to delete this card for <strong>John Smith</strong>, do you wish to continue?
+                    </div>
 
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-success"
-                onclick="$('#card02').hide();"
-                data-dismiss="modal"
-              >
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" onclick="$('#card02').hide();" data-dismiss="modal">
                 YES
               </button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">
                 NO
               </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
 
-      <!-- modal more info for user 03 -->
-      <div class="modal fade" id="profile03">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title text-info">Profile 03</h4>
-              <button type="button" class="close" data-dismiss="modal">
+        <!-- modal more info for user 03 -->
+        <div class="modal fade" id="profile03">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-info">Profile 03</h4>
+                        <button type="button" class="close" data-dismiss="modal">
                 &times;
               </button>
-            </div>
+                    </div>
 
-            <div class="modal-body text-primary">
-              <p>Home Address: 314 Imam Haron Road</p>
-              <p>Next of keen: Sally Doe</p>
-              <p>Next of keen relationship: Wife</p>
-              <p>Next of keen cell: 0780107159</p>
-              <p>Next of keen email: sallydoe@email.com</p>
-            </div>
+                    <div class="modal-body text-primary">
+                        <p>Home Address: 314 Imam Haron Road</p>
+                        <p>Next of keen: Sally Doe</p>
+                        <p>Next of keen relationship: Wife</p>
+                        <p>Next of keen cell: 0780107159</p>
+                        <p>Next of keen email: sallydoe@email.com</p>
+                    </div>
 
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">
                 Close
               </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
 
-      <!-- modal delete for user 03 -->
-      <div class="modal fade" id="delete03">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title text-danger">Delete Card</h4>
-              <button type="button" class="close" data-dismiss="modal">
+        <!-- modal delete for user 03 -->
+        <div class="modal fade" id="delete03">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-danger">Delete Card</h4>
+                        <button type="button" class="close" data-dismiss="modal">
                 &times;
               </button>
-            </div>
+                    </div>
 
-            <div class="modal-body text-primary">
-              You are about to delete this card for <strong>John Kane</strong>,
-              do you wish to continue?
-            </div>
+                    <div class="modal-body text-primary">
+                        You are about to delete this card for <strong>John Kane</strong>, do you wish to continue?
+                    </div>
 
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-success"
-                onclick="$('#card03').hide();"
-                data-dismiss="modal"
-              >
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" onclick="$('#card03').hide();" data-dismiss="modal">
                 YES
               </button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">
                 NO
               </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
 
-      <!-- modal more info for user 04 -->
-      <div class="modal fade" id="profile04">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title text-info">Profile 04</h4>
-              <button type="button" class="close" data-dismiss="modal">
+        <!-- modal more info for user 04 -->
+        <div class="modal fade" id="profile04">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-info">Profile 04</h4>
+                        <button type="button" class="close" data-dismiss="modal">
                 &times;
               </button>
-            </div>
+                    </div>
 
-            <div class="modal-body text-primary">
-              <p>Home Address: 314 Imam Haron Road</p>
-              <p>Next of keen: Sally Doe</p>
-              <p>Next of keen relationship: Wife</p>
-              <p>Next of keen cell: 0780107159</p>
-              <p>Next of keen email: sallydoe@email.com</p>
-            </div>
+                    <div class="modal-body text-primary">
+                        <p>Home Address: 314 Imam Haron Road</p>
+                        <p>Next of keen: Sally Doe</p>
+                        <p>Next of keen relationship: Wife</p>
+                        <p>Next of keen cell: 0780107159</p>
+                        <p>Next of keen email: sallydoe@email.com</p>
+                    </div>
 
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">
                 Close
               </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
 
-      <!-- modal delete for user 04 -->
-      <div class="modal fade" id="delete04">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title text-danger">Delete Card</h4>
-              <button type="button" class="close" data-dismiss="modal">
+        <!-- modal delete for user 04 -->
+        <div class="modal fade" id="delete04">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-danger">Delete Card</h4>
+                        <button type="button" class="close" data-dismiss="modal">
                 &times;
               </button>
-            </div>
+                    </div>
 
-            <div class="modal-body text-primary">
-              You are about to delete this card for <strong>John Wayne</strong>,
-              do you wish to continue?
-            </div>
+                    <div class="modal-body text-primary">
+                        You are about to delete this card for <strong>John Wayne</strong>, do you wish to continue?
+                    </div>
 
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-success"
-                onclick="$('#card04').hide();"
-                data-dismiss="modal"
-              >
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" onclick="$('#card04').hide();" data-dismiss="modal">
                 YES
               </button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">
                 NO
               </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
 
-      <!-- add new user toggle form -->
+        <!-- add new user toggle form -->
 
-      <div class="add_user">
-        <p>
-          <button
-            type="button"
-            class="btn btn-info"
-            data-toggle="modal"
-            data-target="#formUP"
-          >
+        <div class="add_user">
+            <p>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#formUP">
             Add new user
           </button>
-        </p>
+            </p>
 
-        <div class="modal fade" id="formUP">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <!-- modal head -->
-              <div class="modal-header">
-                <h4 class="modal-title text-primary">Add user</h4>
-                <button type="button" class="close" data-dismiss="modal">
+            <div class="modal fade" id="formUP">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- modal head -->
+                        <div class="modal-header">
+                            <h4 class="modal-title text-primary">Add user</h4>
+                            <button type="button" class="close" data-dismiss="modal">
                   &times;
                 </button>
-              </div>
+                        </div>
 
-              <!-- modal body  -->
-              <div class="modal-body">
-                <form class="was-validated">
-                  <div class="form-group">
-                    <label for="fname">Full Name:</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="fname"
-                      placeholder="Enter full name"
-                      name="fname"
-                      required
-                    />
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">
-                      Please fill out this field.
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      placeholder="Enter your email"
-                      name="email"
-                      required
-                    />
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">
-                      Please fill out this field.
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="c_phone">Cellphone:</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="c_phone"
-                      placeholder="Enter your cellphone number"
-                      name="c_phone"
-                      required
-                    />
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">
-                      Please fill out this field.
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="t_phone">Landline:</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="t_phone"
-                      placeholder="Enter your landline number"
-                      name="t_phone"
-                      required
-                    />
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">
-                      Please fill out this field.
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="address">Address:</label>
-                    <textarea
-                      name="address"
-                      id="address"
-                      class="form-control"
-                      cols="30"
-                      rows="3"
-                      required
-                    ></textarea>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">
-                      Please fill out this field.
-                    </div>
-                  </div>
-                  <hr />
-                  <h2>Next of keen:</h2>
-                  <div class="form-group">
-                    <label for="k_fname">Full Name:</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="k_fname"
-                      placeholder="Enter full name"
-                      name="k_fname"
-                      required
-                    />
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">
-                      Please fill out this field.
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="k_relate">Relationship:</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="k_relate"
-                      placeholder="What's your relation with person?"
-                      name="k_relate"
-                      required
-                    />
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">
-                      Please fill out this field.
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="k_c_phone">Cellphone:</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="k_c_phone"
-                      placeholder="Enter your cellphone number"
-                      name="k_c_phone"
-                      required
-                    />
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">
-                      Please fill out this field.
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="k_email">Email:</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="k_email"
-                      placeholder="Enter your email"
-                      name="k_email"
-                      required
-                    />
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">
-                      Please fill out this field.
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-dark" name="add_user">
+                        <!-- modal body  -->
+                        <div class="modal-body">
+                            <form class="was-validated">
+                                <div class="form-group">
+                                    <label for="fname">Full Name:</label>
+                                    <input type="text" class="form-control" id="fname" placeholder="Enter full name" name="fname" required />
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">
+                                        Please fill out this field.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required />
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">
+                                        Please fill out this field.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="c_phone">Cellphone:</label>
+                                    <input type="number" class="form-control" id="c_phone" placeholder="Enter your cellphone number" name="c_phone" required />
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">
+                                        Please fill out this field.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="t_phone">Landline:</label>
+                                    <input type="number" class="form-control" id="t_phone" placeholder="Enter your landline number" name="t_phone" required />
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">
+                                        Please fill out this field.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address:</label>
+                                    <textarea name="address" id="address" class="form-control" cols="30" rows="3" required></textarea>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">
+                                        Please fill out this field.
+                                    </div>
+                                </div>
+                                <hr />
+                                <h2>Next of keen:</h2>
+                                <div class="form-group">
+                                    <label for="k_fname">Full Name:</label>
+                                    <input type="text" class="form-control" id="k_fname" placeholder="Enter full name" name="k_fname" required />
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">
+                                        Please fill out this field.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="k_relate">Relationship:</label>
+                                    <input type="text" class="form-control" id="k_relate" placeholder="What's your relation with person?" name="k_relate" required />
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">
+                                        Please fill out this field.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="k_c_phone">Cellphone:</label>
+                                    <input type="number" class="form-control" id="k_c_phone" placeholder="Enter your cellphone number" name="k_c_phone" required />
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">
+                                        Please fill out this field.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="k_email">Email:</label>
+                                    <input type="email" class="form-control" id="k_email" placeholder="Enter your email" name="k_email" required />
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">
+                                        Please fill out this field.
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-dark" name="add_user">
                     Submit
                   </button>
-                </form>
-              </div>
+                            </form>
+                        </div>
 
-              <!-- modal footer -->
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-danger"
-                  data-dismiss="modal"
-                >
+                        <!-- modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">
                   Close
                 </button>
-              </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </body>
+
+    <!-- script files load last for functionality purposes -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <p>Made with <span class="love">&#10084;</span> by Lukhanyo Vakele</p>
+</body>
+
 </html>
 
 <!-- EXTRA COMMENTS -->

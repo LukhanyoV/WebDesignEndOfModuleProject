@@ -1,0 +1,82 @@
+body {
+    display: block;
+    text-align: center;
+}
+
+
+/* navigation bar */
+
+
+/* when styling navigation bars, use classes instead of the tag selector */
+
+ul {
+    display: block;
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+    background-color: darkslategray;
+    width: 100vw;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: white;
+    background-color: #111111;
+}
+
+
+/* profile cards */
+
+.profile_card {
+    display: flexbox;
+    /* border: 2px solid black; */
+    margin: 20px auto;
+    padding: 10px;
+    height: 350px;
+    width: 220px;
+    text-align: left;
+}
+
+.profile_card .bottom {
+    align-self: flex-end;
+}
+
+.profile_pic {
+    width: 100px;
+    height: 100px;
+}
+
+.row {
+    margin: 20px auto;
+    justify-content: space-evenly;
+}
+
+.add_user {
+    display: block;
+    text-align: left;
+}
+
+
+/* modal body */
+
+.modal-body {
+    text-align: left;
+}
+
+
+/* feet element */
+
+span.love {
+    color: red;
+}
